@@ -8,5 +8,5 @@ public sealed class Active : ValueObject
 
     public Active(bool active) => Value = active;
 
-    private Active() { }
+    public Active() { }
 }
