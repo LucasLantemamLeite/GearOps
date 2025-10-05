@@ -8,7 +8,7 @@ public sealed class Email : ValueObject
 
     public Email(string email)
     {
-        Value = email;
+        Value = email.ToLower();
     }
 
     private Email() { }
