@@ -1,5 +1,4 @@
 using GearOps.Domain.Enums.Device;
-using GearOps.Domain.ValueObjects.Base;
 
 namespace GearOps.Domain.ValueObjects.Device;
 

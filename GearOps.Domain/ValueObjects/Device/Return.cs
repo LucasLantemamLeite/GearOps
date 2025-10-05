@@ -1,5 +1,3 @@
-using GearOps.Domain.ValueObjects.Base;
-
 namespace GearOps.Domain.ValueObjects.Device;
 
 public sealed class Return : ValueObject

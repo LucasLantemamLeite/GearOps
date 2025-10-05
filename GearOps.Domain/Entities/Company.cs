@@ -1,5 +1,3 @@
-using GearOps.Domain.Entities.Base;
-using GearOps.Domain.ValueObjects.Common;
 using GearOps.Domain.ValueObjects.Company;
 
 namespace GearOps.Domain.Entities;

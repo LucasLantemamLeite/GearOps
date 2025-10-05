@@ -1,6 +1,4 @@
-using GearOps.Domain.Entities.Base;
 using Type = GearOps.Domain.ValueObjects.Common.Type;
-using GearOps.Domain.ValueObjects.Common;
 using GearOps.Domain.ValueObjects.Device;
 
 namespace GearOps.Domain.Entities;
