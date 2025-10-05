@@ -1,6 +1,6 @@
 using GearOps.Domain.ValueObjects.Base;
 
-namespace GearOps.Domain.ValueObjects.CompanyObjects;
+namespace GearOps.Domain.ValueObjects.Company;
 
 public sealed class CNPJ : ValueObject
 {
