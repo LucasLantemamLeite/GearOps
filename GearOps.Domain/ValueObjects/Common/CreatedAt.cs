@@ -1,6 +1,6 @@
 using GearOps.Domain.ValueObjects.Base;
 
-namespace GearOps.Domain.ValueObjects.Company;
+namespace GearOps.Domain.ValueObjects.Common;
 
 public sealed class CreatedAt : ValueObject
 {

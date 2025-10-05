@@ -1,12 +1,12 @@
 using GearOps.Domain.ValueObjects.Base;
 
-namespace GearOps.Domain.ValueObjects.Company;
+namespace GearOps.Domain.ValueObjects.Common;
 
 public sealed class Active : ValueObject
 {
     public bool Value { get; private set; } = true;
 
-    public Active(bool status) => Value = status;
+    public Active(bool active) => Value = active;
 
     private Active() { }
 }
