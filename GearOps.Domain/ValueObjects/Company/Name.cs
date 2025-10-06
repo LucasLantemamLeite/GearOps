@@ -6,6 +6,7 @@ public sealed class Name : ValueObject
 
     public Name(string name)
     {
+        DomainException.ThrowIfFalse(!string.IsNullOrWhiteSpace(name), "Nome da empresa é obrigatório.");
         Value = name;
     }
 

@@ -6,6 +6,7 @@ public sealed class Name : ValueObject
 
     public Name(string name)
     {
+        DomainException.ThrowIfFalse(!string.IsNullOrWhiteSpace(name), "Nome do dispositivo é obrigatório.");
         Value = name;
     }
 

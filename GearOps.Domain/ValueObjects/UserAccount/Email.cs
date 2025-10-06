@@ -6,6 +6,7 @@ public sealed class Email : ValueObject
 
     public Email(string email)
     {
+        EmailException.ThrowIfNotMatch(email, "Email inválido.");
         Value = email.ToLower();
     }
 

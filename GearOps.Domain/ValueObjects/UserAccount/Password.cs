@@ -6,6 +6,7 @@ public sealed class Password : ValueObject
 
     public Password(string password)
     {
+        DomainException.ThrowIfFalse(!string.IsNullOrWhiteSpace(password), "Senha do usuário é obrigatório.");
         Value = password;
     }
 

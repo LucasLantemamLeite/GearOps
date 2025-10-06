@@ -8,6 +8,7 @@ public sealed class Status : ValueObject
 
     public Status(int status)
     {
+        EnumException.ThrowIfNotDefined<EStatus>(status, "Status inválido.");
         Value = (EStatus)status;
     }
 

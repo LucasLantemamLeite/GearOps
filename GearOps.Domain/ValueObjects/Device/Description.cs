@@ -6,6 +6,7 @@ public sealed class Description : ValueObject
 
     public Description(string? description)
     {
+        DomainException.ThrowIfFalse(description == null || description.Length <= 70, "Descrição do dispositivo deve ter menos de 70 caracteres.");
         Value = description;
     }
 
