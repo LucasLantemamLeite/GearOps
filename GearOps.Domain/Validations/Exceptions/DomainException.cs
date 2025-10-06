@@ -1,0 +1,10 @@
+namespace GearOps.Domain.Validations.Exceptions;
+
+public sealed class DomainException(string message) : Exception(message)
+{
+    public static void ThrowIfFalse(bool condition, string message)
+    {
+        if (!condition)
+            throw new DomainException(message);
+    }
+}
