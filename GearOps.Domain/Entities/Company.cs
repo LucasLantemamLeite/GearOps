@@ -13,7 +13,7 @@ public sealed class Company : Entity
 
     public Company(string name, string? imageUrl, string cnpj, Guid owner)
     {
-        Name = new(name);
+        Name = new(name, "Nome da empresa é obrigatório.");
         Image = new(imageUrl);
         CNPJ = new(cnpj);
         OwnerId = new(owner);
@@ -21,7 +21,7 @@ public sealed class Company : Entity
 
     public Company(Guid id, string name, string? imageUrl, string cnpj, Guid owner, DateTime created, bool active) : base(id)
     {
-        Name = new(name);
+        Name = new(name, "Nome da empresa é obrigatório.");
         Image = new(imageUrl);
         CNPJ = new(cnpj);
         OwnerId = new(owner);

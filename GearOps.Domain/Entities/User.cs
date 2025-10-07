@@ -15,7 +15,7 @@ public sealed class User : Entity
 
     public User(string name, string email, string password, string phone, int role, Guid company)
     {
-        Name = new(name);
+        Name = new(name, "Nome do usuário é obrigatório.");
         Email = new(email);
         Password = new(password);
         Phone = new(phone);
@@ -25,7 +25,7 @@ public sealed class User : Entity
 
     public User(Guid id, string name, string email, string password, string phone, int role, DateTime created, DateTime Updated, Guid company) : base(id)
     {
-        Name = new(name);
+        Name = new(name, "Nome do usuário é obrigatório.");
         Email = new(email);
         Password = new(password);
         Phone = new(phone);
