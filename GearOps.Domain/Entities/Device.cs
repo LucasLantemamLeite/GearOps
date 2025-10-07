@@ -6,7 +6,7 @@ namespace GearOps.Domain.Entities;
 public sealed class Device : Entity
 {
     public Name Name { get; private set; } = null!;
-    public Type Type { get; private set; } = null!;
+    public DeviceType Type { get; private set; } = null!;
     public Status Status { get; private set; } = null!;
     public Description? Description { get; private set; }
     public Start? Start { get; private set; }
@@ -18,7 +18,7 @@ public sealed class Device : Entity
     public Device(string name, string type, int status, string? description, DateTime? startDate, DateTime? returnDate, Guid company)
     {
         Name = new(name);
-        Type = new(type);
+        Type = new(type, company);
         Status = new(status);
         Description = new(description);
         Start = new(startDate);
@@ -29,7 +29,7 @@ public sealed class Device : Entity
     public Device(Guid id, string name, string type, int status, string? description, DateTime? startDate, DateTime? returnDate, DateTime created, DateTime updated, Guid company) : base(id)
     {
         Name = new(name);
-        Type = new(type);
+        Type = new(type, company);
         Status = new(status);
         Description = new(description);
         Start = new(startDate);
