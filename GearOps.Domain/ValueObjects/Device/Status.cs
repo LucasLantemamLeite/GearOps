@@ -1,5 +1,3 @@
-using GearOps.Domain.Enums.Device;
-
 namespace GearOps.Domain.ValueObjects.Device;
 
 public sealed class Status : ValueObject

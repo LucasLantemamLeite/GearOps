@@ -1,5 +1,3 @@
-using GearOps.Domain.Enums.User;
-
 namespace GearOps.Domain.ValueObjects.User;
 
 public sealed class Role : ValueObject
