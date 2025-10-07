@@ -1,4 +1,4 @@
-namespace GearOps.Domain.Enums.User;
+namespace GearOps.Domain.Enums;
 
 public enum ERole
 {

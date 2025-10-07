@@ -1,4 +1,4 @@
-namespace GearOps.Domain.Enums.Device;
+namespace GearOps.Domain.Enums;
 
 public enum EStatus
 {
