@@ -8,7 +8,7 @@ public sealed class Role : ValueObject
 
     public Role(int role)
     {
-        EnumFlagException.ThrowIfFlagNotDefined<ERole>(role, "Nível de Acesso inválido.");
+        EnumException.ThrowIfNotDefined<ERole>(role, "Nível de acesso inválido.");
         Value = (ERole)role;
     }
 
