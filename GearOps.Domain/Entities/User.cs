@@ -2,7 +2,7 @@ using GearOps.Domain.ValueObjects.User;
 
 namespace GearOps.Domain.Entities;
 
-public sealed class UserAccount : Entity
+public sealed class User : Entity
 {
     public Name Name { get; private set; } = null!;
     public Email Email { get; private set; } = null!;
@@ -13,7 +13,7 @@ public sealed class UserAccount : Entity
     public UpdatedAt UpdatedAt { get; private set; } = new();
     public CompanyId CompanyId { get; private set; } = null!;
 
-    public UserAccount(string name, string email, string password, string phone, int role, Guid company)
+    public User(string name, string email, string password, string phone, int role, Guid company)
     {
         Name = new(name);
         Email = new(email);
@@ -23,7 +23,7 @@ public sealed class UserAccount : Entity
         CompanyId = new(company);
     }
 
-    public UserAccount(Guid id, string name, string email, string password, string phone, int role, DateTime created, DateTime Updated, Guid company) : base(id)
+    public User(Guid id, string name, string email, string password, string phone, int role, DateTime created, DateTime Updated, Guid company) : base(id)
     {
         Name = new(name);
         Email = new(email);
@@ -35,5 +35,5 @@ public sealed class UserAccount : Entity
         CompanyId = new(company);
     }
 
-    private UserAccount() { }
+    private User() { }
 }
