@@ -1,5 +1,3 @@
-using GearOps.Domain.ValueObjects.Base;
-
 namespace GearOps.Domain.ValueObjects.Common;
 
 public sealed class CompanyId : ValueObject
