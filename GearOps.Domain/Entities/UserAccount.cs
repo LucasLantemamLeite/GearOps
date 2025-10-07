@@ -1,4 +1,4 @@
-using GearOps.Domain.ValueObjects.UserAccount;
+using GearOps.Domain.ValueObjects.User;
 
 namespace GearOps.Domain.Entities;
 

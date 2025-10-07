@@ -1,4 +1,4 @@
-namespace GearOps.Domain.ValueObjects.UserAccount;
+namespace GearOps.Domain.ValueObjects.User;
 
 public sealed class Password : ValueObject
 {
