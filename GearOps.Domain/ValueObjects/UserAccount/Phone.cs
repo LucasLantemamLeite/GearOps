@@ -6,7 +6,7 @@ public sealed class Phone : ValueObject
 
     public Phone(string phone)
     {
-        PhoneException.ThrowIfNotMatch(phone, "Phone inválido.");
+        PhoneException.ThrowIfNotMatch(phone, "Número de telefone inválido.");
         Value = phone;
     }
 
