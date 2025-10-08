@@ -5,7 +5,6 @@ namespace GearOps.Domain.Entities;
 public sealed class Device : Entity
 {
     public Name Name { get; private set; } = null!;
-    public DeviceType DeviceType { get; private set; } = null!;
     public Status Status { get; private set; } = null!;
     public Description? Description { get; private set; }
     public Start? Start { get; private set; }
@@ -14,10 +13,9 @@ public sealed class Device : Entity
     public UpdatedAt UpdatedAt { get; private set; } = new();
     public CompanyId CompanyId { get; private set; } = null!;
 
-    public Device(string name, DeviceType type, int status, string? description, DateTime? startDate, DateTime? returnDate, Guid company)
+    public Device(string name, int status, string? description, DateTime? startDate, DateTime? returnDate, Guid company)
     {
         Name = new(name, "Nome do dispositivo é obrigatório.");
-        DeviceType = type;
         Status = new(status);
         Description = new(description);
         Start = new(startDate);
@@ -25,10 +23,9 @@ public sealed class Device : Entity
         CompanyId = new(company);
     }
 
-    public Device(Guid id, string name, DeviceType type, int status, string? description, DateTime? startDate, DateTime? returnDate, DateTime created, DateTime updated, Guid company) : base(id)
+    public Device(Guid id, string name, int status, string? description, DateTime? startDate, DateTime? returnDate, DateTime created, DateTime updated, Guid company) : base(id)
     {
         Name = new(name, "Nome do dispositivo é obrigatório.");
-        DeviceType = type;
         Status = new(status);
         Description = new(description);
         Start = new(startDate);
