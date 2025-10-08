@@ -6,7 +6,7 @@ public sealed class CNPJ : ValueObject
 
     public CNPJ(string cnpj)
     {
-        CNPJException.ThrowIfInvalid(cnpj, "Formtato do CNPJ inválido.", "Digito verificador incorreto.");
+        CNPJException.ThrowIfInvalid(cnpj, "Formato do CNPJ inválido.", "Dígito verificador incorreto.");
         Value = cnpj;
     }
 
