@@ -11,7 +11,8 @@ public sealed class User : Entity
     public Role Role { get; private set; } = null!;
     public CreatedAt CreatedAt { get; private set; } = new();
     public UpdatedAt UpdatedAt { get; private set; } = new();
-    public CompanyId CompanyId { get; private set; } = null!;
+    public Active Active { get; private set; } = new();
+    public Guid CompanyId { get; private set; }
 
     public User(string name, string email, string password, string phone, int role, Guid company)
     {
@@ -20,10 +21,10 @@ public sealed class User : Entity
         Password = new(password);
         Phone = new(phone);
         Role = new(role);
-        CompanyId = new(company);
+        CompanyId = company;
     }
 
-    public User(Guid id, string name, string email, string password, string phone, int role, DateTime created, DateTime Updated, Guid company) : base(id)
+    public User(Guid id, string name, string email, string password, string phone, int role, DateTime created, DateTime Updated, bool active, Guid company) : base(id)
     {
         Name = new(name, "Nome do usuário é obrigatório.");
         Email = new(email);
@@ -32,7 +33,8 @@ public sealed class User : Entity
         CreatedAt = new(created);
         UpdatedAt = new(Updated);
         Role = new(role);
-        CompanyId = new(company);
+        Active = new(active);
+        CompanyId = company;
     }
 
     private User() { }

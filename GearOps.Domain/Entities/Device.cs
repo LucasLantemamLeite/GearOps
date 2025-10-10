@@ -11,19 +11,21 @@ public sealed class Device : Entity
     public Return? Return { get; private set; }
     public CreatedAt CreatedAt { get; private set; } = new();
     public UpdatedAt UpdatedAt { get; private set; } = new();
-    public CompanyId CompanyId { get; private set; } = null!;
+    public Guid DeviceTypeId { get; private set; }
+    public Guid CompanyId { get; private set; }
 
-    public Device(string name, int status, string? description, DateTime? startDate, DateTime? returnDate, Guid company)
+    public Device(string name, int status, string? description, DateTime? startDate, DateTime? returnDate, Guid device, Guid company)
     {
         Name = new(name, "Nome do dispositivo é obrigatório.");
         Status = new(status);
         Description = new(description);
         Start = new(startDate);
         Return = new(returnDate);
-        CompanyId = new(company);
+        DeviceTypeId = device;
+        CompanyId = company;
     }
 
-    public Device(Guid id, string name, int status, string? description, DateTime? startDate, DateTime? returnDate, DateTime created, DateTime updated, Guid company) : base(id)
+    public Device(Guid id, string name, int status, string? description, DateTime? startDate, DateTime? returnDate, DateTime created, DateTime updated, Guid device, Guid company) : base(id)
     {
         Name = new(name, "Nome do dispositivo é obrigatório.");
         Status = new(status);
@@ -32,7 +34,8 @@ public sealed class Device : Entity
         Return = new(returnDate);
         CreatedAt = new(created);
         UpdatedAt = new(updated);
-        CompanyId = new(company);
+        DeviceTypeId = device;
+        CompanyId = company;
     }
 
     private Device() { }
