@@ -2,7 +2,7 @@ namespace GearOps.Domain.Entities.Base;
 
 public abstract class Entity
 {
-    protected Guid Id { get; set; }
+    public Guid Id { get; protected set; }
 
     protected Entity(Guid id) => Id = id;
 
