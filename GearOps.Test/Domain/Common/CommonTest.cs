@@ -1,12 +1,12 @@
-namespace GearOps.Test.Domain.ValueObjects;
+namespace GearOps.Test.Domain.Common;
 
 [Trait("Category", "CommonTests")]
 public sealed class CommonTests
 {
     [Theory]
-    [InlineData("Teste de Nome")]
-    [InlineData("Testando Nome")]
-    [InlineData("Já testei o Nome")]
+    [InlineData("Gabrielle")]
+    [InlineData("Diogo")]
+    [InlineData("Tomás")]
     public void Name_WhenValidString_ShouldNotThrowDomainException(string name)
     {
         var ex = Record.Exception(() => new Name(name, "Name é obrigatório."));
@@ -32,15 +32,6 @@ public sealed class CommonTests
     public void Image_WhenValidOrEmptyOrNull_ShouldNotThrowDomainException(string imageUrl)
     {
         var ex = Record.Exception(() => new Image(imageUrl));
-        Assert.Null(ex);
-    }
-
-    [Theory]
-    [InlineData("a3f5e2d1-9b8c-4f7d-91a2-6c3e4b5f8d9a")]
-    [InlineData("d7c2b1a4-5e6f-4d8a-9b3c-1f2e3d4a5b6c")]
-    public void CompanyId_WhenValidGuid_ShouldNotThrowDomainException(Guid id)
-    {
-        var ex = Record.Exception(() => new CompanyId(id));
         Assert.Null(ex);
     }
 

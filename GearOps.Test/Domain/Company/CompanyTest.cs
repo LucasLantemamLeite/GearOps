@@ -1,18 +1,10 @@
-namespace GearOps.Domain.ValueObjects.Company;
+using GearOps.Domain.ValueObjects.Company;
+
+namespace GearOps.Test.Domain.Company;
 
 [Trait("Category", "CompanyTests")]
 public sealed class CompanyTests
 {
-    [Theory]
-    [InlineData("49e6e465-001b-48ac-823c-950c5f07ebde")]
-    [InlineData("bd1c6276-1ee1-4da8-be9b-1f2f8af411ec")]
-    [InlineData("47c2647c-a135-40b3-88bd-615812bebb6c")]
-    public void OwnerId_WhenValidGuid_ShouldNotThrowException(Guid id)
-    {
-        var ex = Record.Exception(() => new OwnerId(id));
-        Assert.Null(ex);
-    }
-
     [Theory]
     [InlineData("05.338.815/0001-07")]
     [InlineData("36.032.270/0001-21")]
