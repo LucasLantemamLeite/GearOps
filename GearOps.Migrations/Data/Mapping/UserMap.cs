@@ -17,7 +17,7 @@ public sealed class UserMap : IEntityTypeConfiguration<User>
         builder.Property(x => x.Email)
             .HasColumnName("Email")
             .HasColumnType("varchar(255)")
-            .HasConversion(v => v.Value, v => new(v))
+            .HasConversion(v => v.Value.ToLower(), v => new(v))
             .IsRequired();
 
         builder.Property(x => x.Password)
