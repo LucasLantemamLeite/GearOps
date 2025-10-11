@@ -22,5 +22,5 @@ public sealed class DeviceType : Entity
         CompanyId = company;
     }
 
-    private DeviceType() { }
+    public DeviceType() { }
 }
